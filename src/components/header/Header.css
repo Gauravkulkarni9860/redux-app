@@ -1,0 +1,12 @@
+.Header {
+    display: block;
+    width: 100%;
+    background-color: black;
+    padding: 6px;
+}
+
+.Header p {
+    text-align: right;
+    color: whitesmoke;
+    margin-right: 25px;
+}
