@@ -7,7 +7,7 @@ class Footer extends Component {
     render () {
         return (
             <div className="Footer">
-                <Button variant="success">Rs. 120 Check out</Button>
+                <Button variant="success">Rs. {this.props.itm.length * 100} Check out</Button>
             </div>
         );
     }
