@@ -3,3 +3,12 @@
     font-weight: bolder;
 }
 
+.Cart li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.Cart h4 {
+    margin-bottom: 30px;
+}
+

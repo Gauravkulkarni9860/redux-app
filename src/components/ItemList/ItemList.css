@@ -2,3 +2,10 @@
     text-align: left;
 }
 
+.Items li {
+    display: inline-block;
+}
+
+.Shift {
+    margin-left: 50px;
+}

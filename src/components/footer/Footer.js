@@ -4,10 +4,24 @@ import './Footer.css';
 import { connect } from 'react-redux';
 
 class Footer extends Component {
+    
     render () {
+        let itemPrice = 0;
+        itemPrice = this.props.itm.map(item => {
+            itemPrice = itemPrice + (item.quantity * item.price);
+            return itemPrice;
+        })
+
+        var price = itemPrice.toLocaleString('hi', {
+            style: 'currency',
+            currency: 'USD',
+          });
+        
         return (
             <div className="Footer">
-                <Button variant="success">Rs. {this.props.itm.length * 100} Check out</Button>
+                <Button variant="success">
+                    <span>{price.replace('$', '₹')}</span> Check out
+                </Button>
             </div>
         );
     }
