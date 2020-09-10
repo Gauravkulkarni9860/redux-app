@@ -6,21 +6,25 @@ import { connect } from 'react-redux';
 class Footer extends Component {
     
     render () {
-        let itemPrice = 0;
-        itemPrice = this.props.itm.map(item => {
-            itemPrice = itemPrice + (item.quantity * item.price);
-            return itemPrice;
-        })
 
-        var price = itemPrice.toLocaleString('hi', {
+        let itemPrice = 0;
+
+        for(let i = 0; i < this.props.itm.length; i++){
+            let item = this.props.itm[i];
+            itemPrice = itemPrice + (item.quantity * item.price);
+        }
+
+        let price = itemPrice.toLocaleString('hi', {
             style: 'currency',
             currency: 'USD',
-          });
-        
+        });
+
+        price = price.replace('$', '₹');
+
         return (
             <div className="Footer">
-                <Button variant="success">
-                    <span>{price.replace('$', '₹')}</span> Check out
+                <Button variant="success" disabled={itemPrice===0}>
+                    <span>{price}</span> Check out
                 </Button>
             </div>
         );
@@ -29,7 +33,8 @@ class Footer extends Component {
 
 const mapStateToProps = state => {
     return {
-        itm : state.cartItem
+        itm : state.cartItem,
+        
     };
 }
 

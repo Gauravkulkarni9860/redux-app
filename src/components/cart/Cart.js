@@ -35,7 +35,13 @@ class Cart extends Component {
             <div className="Cart">
                 <h4>
                     You selected Items : &nbsp; 
-                    <Button variant="danger" onClick={()=>this.props.onRemoveAllItems()}>Remove All</Button>
+                    <Button 
+                        variant="danger" 
+                        onClick={()=>this.props.onRemoveAllItems()} 
+                        disabled={this.props.itm.legth !== 0}
+                    >
+                        Remove All
+                    </Button>
                 </h4>
                 {selectedItem}
             </div>

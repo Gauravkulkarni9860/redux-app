@@ -2,7 +2,6 @@ import * as actionType from './action';
 
 const initialState = {
     cartItem : [],
-    
 };
 
 
@@ -16,7 +15,6 @@ const reducer = (state=initialState, action) => {
                 price : action.payload.price,
                 quantity : action.payload.quant,
             }
-            
             return {
                 ...state,
                 cartItem : state.cartItem.concat( newItem ),
@@ -31,7 +29,7 @@ const reducer = (state=initialState, action) => {
             });
             return {
                 ...state,
-                cartItem : item
+                cartItem : item,
             }
 
         case actionType.SUBSTRACT_QUANTITY :
@@ -58,7 +56,7 @@ const reducer = (state=initialState, action) => {
             }
         default :
             return state;
-    }
+    }   
     
 }
 
