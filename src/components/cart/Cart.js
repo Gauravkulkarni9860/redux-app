@@ -6,7 +6,7 @@ import * as actionType from '../../store/action';
 
 class Cart extends Component {
     render () {
-        
+
         const selectedItem = this.props.itm !== null ?
         this.props.itm.map((item, index) => {
             return (
@@ -38,7 +38,6 @@ class Cart extends Component {
                     <Button 
                         variant="danger" 
                         onClick={()=>this.props.onRemoveAllItems()} 
-                        disabled={this.props.itm.legth !== 0}
                     >
                         Remove All
                     </Button>

@@ -12,7 +12,10 @@ class Header extends Component {
         }
         return (
             <div className="Header">
-                <p> <span> {itemQuantity} </span> elements in cart <i className="fa fa-shopping-cart" style={{fontSize:'30px'}}></i></p>
+                {
+                    itemQuantity === 0 ? <p><i className="fa fa-shopping-cart" style={{fontSize:'30px', color:'red'}}></i></p> :
+                    <p><span> {itemQuantity} </span> elements in cart <i className="fa fa-shopping-cart" style={{fontSize:'30px', color:'green'}}></i></p> 
+                }
             </div>
         );
     }
