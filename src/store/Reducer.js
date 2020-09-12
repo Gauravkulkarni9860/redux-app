@@ -12,7 +12,7 @@ const reducer = (state=initialState, action) => {
             const newItem = {
                 id : action.payload.itemId, 
                 name : action.payload.title,
-                price : action.payload.price,
+                price : action.payload.itemPrice,
                 quantity : action.payload.quant,
             }
             return {

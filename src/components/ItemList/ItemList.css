@@ -1,11 +1,11 @@
-.Items ul {
+.Items {
+    padding: 10px;
     text-align: left;
+    color: whitesmoke;
 }
 
-.Items li {
-    display: inline-block;
-}
-
-.Shift {
-    margin-left: 50px;
+.Items h4 {
+    color: tomato;
+    text-align: center;
+    
 }

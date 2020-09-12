@@ -7,15 +7,18 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { BrowserRouter } from 'react-router-dom';
 import reducer from './store/Reducer';
 
 const store = createStore(reducer, composeWithDevTools());
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
+  
   document.getElementById('root')
 );
 

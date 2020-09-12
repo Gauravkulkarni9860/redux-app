@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home';
-import { Row } from 'react-bootstrap';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+// import Home from './components/Home';
+// import { Row } from 'react-bootstrap';
+// import Header from './components/header/Header';
+// import Footer from './components/footer/Footer';
+import MainPage from './components/MainPage';
 
 
 function App() {
   return (
     <div className="App">
-      <Row>
+      {/* <Row>
         <Header />
       </Row>
       <Row>
@@ -17,7 +18,9 @@ function App() {
       </Row>
       <Row>
         <Footer />
-      </Row>
+      </Row> */}
+      <MainPage />
+
     </div>
   );
 }

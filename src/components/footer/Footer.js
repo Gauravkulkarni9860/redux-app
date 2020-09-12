@@ -19,7 +19,7 @@ class Footer extends Component {
             currency: 'USD',
         });
 
-        price = price.replace('$', '₹');
+        price = price.replace('$', '₹ ');
 
         return (
             <div className="Footer">

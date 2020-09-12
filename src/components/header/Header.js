@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Header.css';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     render () {
@@ -10,13 +12,21 @@ class Header extends Component {
             let item = this.props.itm[i];
             itemQuantity = itemQuantity + item.quantity;
         }
+        
         return (
             <div className="Header">
+                <Link to="/add-item">
+                    <Button variant="success">
+                        Add New Item
+                    </Button>
+                </Link>
+                
                 {
                     itemQuantity === 0 ? <p><i className="fa fa-shopping-cart" style={{fontSize:'30px', color:'red'}}></i></p> :
-                    <p><span> {itemQuantity} </span> elements in cart <i className="fa fa-shopping-cart" style={{fontSize:'30px', color:'green'}}></i></p> 
+                    <p><span> {itemQuantity} </span> Cart elements <i className="fa fa-shopping-cart" style={{fontSize:'30px', color:'green'}}></i></p> 
                 }
             </div>
+            
         );
     }
 }

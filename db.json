@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Motorola G9",
+      "description": "Powered by the AI-enabled Qualcomm Snapdragon 662 octa-core processor and 4 GB RAM, the Moto G9 provides a smart, super-responsive, and supercharged performance",
+      "price": 12000
+    },
+    {
+      "id": 2,
+      "name": "Realme Narzo 10",
+      "description": "With a powerful 48 MP AI Quad camera that combines the power of four different lenses, you can capture a perfect picture in any scenario. Also, the high-resolution 48 MP primary lens helps you click beautiful and ultra-clear photos.",
+      "price": 9999
+    },
+    {
+      "id": 3,
+      "name": "Realme 6i",
+      "description": "The realme 6i features a large 16.5 cm (6.5) FHD+ display and a refresh rate of 90 Hz that provide visuals much smoother than a standard display, ensuring an immersive entertainment experience.",
+      "price": 13999
+    },
+    {
+      "name": "Xiaomi Note 10",
+      "description": "Launching soon",
+      "price": "15999",
+      "id": 4
+    },
+    {
+      "name": "Xiaomi Note 10 pro",
+      "description": "Also launching soon\n",
+      "price": "18999",
+      "id": 5
+    },
+    {
+      "name": "Realme 10S",
+      "description": "Camera front 48 px rare 128px",
+      "price": "34000",
+      "id": 6
+    }
+  ]
+}
