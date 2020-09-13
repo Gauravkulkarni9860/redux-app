@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import './AddItem.css';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
 
 class AddItem extends Component {
 
@@ -27,19 +26,24 @@ class AddItem extends Component {
     handleSubmit (e) {
         e.preventDefault();
         let url = "http://localhost:3001/items";
-        axios.post(url, {
-            name : this.state.name,
-            description : this.state.description,
-            price : this.state.price
-        }).then(result => {
-            return(
-                alert("Product added successfully!")
-            )
-        })
-        return (<Redirect to="/" />)
-        //console.log(this.state);   
+        if(this.state.name !== '' && this.state.price !== '' && this.state.description !== '') {
+            // console.log("empty")
+            axios.post(url, {
+                name : this.state.name,
+                description : this.state.description,
+                price : this.state.price
+            }).then(result => {
+                return(
+                    alert("Product added successfully!")
+                )
+            })
+            this.props.history.replace("/");
+        }
+        else {
+            alert("Please enter data!");
+        }
+        
     }
-
 
     render () {
      
@@ -49,6 +53,7 @@ class AddItem extends Component {
                     <Col sm={2} xd={2}></Col>
                     <Col sm={8} xd={8}>
                         <form className="Form">
+                            <h4>Add New Item</h4>
                             <label>Product Name</label>
                             <input 
                                 type="text" 

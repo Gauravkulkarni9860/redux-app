@@ -35,6 +35,12 @@
       "description": "Camera front 48 px rare 128px",
       "price": "34000",
       "id": 6
+    },
+    {
+      "name": "OnePlus Nord",
+      "description": "OnePlus well known for camera quality & processor",
+      "price": "45000",
+      "id": 7
     }
   ]
 }

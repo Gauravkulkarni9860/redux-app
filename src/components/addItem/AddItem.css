@@ -8,7 +8,6 @@ input[type=text], input[type=number], textarea {
     box-sizing: border-box;
   }
 
-  
   input[type=button] {
     width: 100%;
     background-color: #4CAF50;
@@ -30,5 +29,10 @@ input[type=text], input[type=number], textarea {
     padding: 20px;
     margin-top: 20px;
     text-align: left;
+  }
+
+  .Form h4 {
+    text-align: center;
+    color: crimson;
   }
   
