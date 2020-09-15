@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Cart.css';
 import { Button } from 'react-bootstrap';
-import * as actionType from '../../store/action';
+import * as actionType from '../../store/actions/action';
 
 class Cart extends Component {
     render () {

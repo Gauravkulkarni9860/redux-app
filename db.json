@@ -41,6 +41,24 @@
       "description": "OnePlus well known for camera quality & processor",
       "price": "45000",
       "id": 7
+    },
+    {
+      "name": "Wrist watch",
+      "description": "It's Sonata's watch for men",
+      "price": "2000",
+      "id": 8
+    },
+    {
+      "name": "Demo Obj",
+      "description": "Sskdjflsdjf",
+      "price": "12000",
+      "id": 9
+    },
+    {
+      "name": "Demo 2",
+      "description": "Sm.m.m",
+      "price": "23000",
+      "id": 10
     }
   ]
 }

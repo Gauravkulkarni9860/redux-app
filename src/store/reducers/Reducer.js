@@ -1,12 +1,13 @@
-import * as actionType from './action';
+import * as actionType from '../actions/action';
 
 const initialState = {
     cartItem : [],
+    itemList : [],    
 };
 
 
 const reducer = (state=initialState, action) => {
-    
+
     switch ( action.type ) {
         case actionType.ADD_TO_CART :
             const newItem = {
@@ -48,16 +49,23 @@ const reducer = (state=initialState, action) => {
             return {
                 ...state,
                 cartItem: state.cartItem.filter(item => item.id !== action.itmId),
-            }    
+            }
+        
         case actionType.REMOVE_ALL :
             return {
                 ...state,
                 cartItem: []
-            }
+            }            
+        
+        case actionType.FETCH_ITEMS :
+            return {
+                ...state,
+                itemList : action.itemList,
+            }    
+
         default :
             return state;
     }   
-    
 }
 
 export default reducer;

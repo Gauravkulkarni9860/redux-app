@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Col, Row } from 'react-bootstrap';
 import './AddItem.css';
-import axios from 'axios';
+import * as actionCreator from '../../store/actions/index';
+//import axios from 'axios';
+
 
 class AddItem extends Component {
 
@@ -25,24 +28,18 @@ class AddItem extends Component {
 
     handleSubmit (e) {
         e.preventDefault();
-        let url = "http://localhost:3001/items";
+        const item = {
+            name : this.state.name,
+            price : this.state.price,
+            description : this.state.description
+        }
         if(this.state.name !== '' && this.state.price !== '' && this.state.description !== '') {
-            // console.log("empty")
-            axios.post(url, {
-                name : this.state.name,
-                description : this.state.description,
-                price : this.state.price
-            }).then(result => {
-                return(
-                    alert("Product added successfully!")
-                )
-            })
+            this.props.onAddItem(item);
             this.props.history.replace("/");
         }
         else {
             alert("Please enter data!");
         }
-        
     }
 
     render () {
@@ -92,4 +89,10 @@ class AddItem extends Component {
     }
 }
 
-export default AddItem;
+const mapDispatchToProps = dispatch => {
+    return {
+        onAddItem : (item) => dispatch(actionCreator.addItemRequest(item))
+    }
+}
+
+export default connect(null,mapDispatchToProps)(AddItem);
