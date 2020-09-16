@@ -22,7 +22,7 @@ class Footer extends Component {
         price = price.replace('$', '₹ ');
 
         return (
-            <div className="Footer">
+            <div className="Footer fixed-bottom">
                 <Button variant="success" disabled={itemPrice===0}>
                     <span>{price}</span> Check out
                 </Button>

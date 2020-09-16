@@ -14,7 +14,7 @@ class Header extends Component {
         }
         
         return (
-            <div className="Header">
+            <div className="Header fixed-top">
                 <Link to="/add-item">
                     <Button variant="success">
                         Add New Item
